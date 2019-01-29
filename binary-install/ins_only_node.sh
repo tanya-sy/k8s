@@ -102,6 +102,7 @@ kind: KubeProxyConfiguration
 metricsBindAddress: ${node_ip}:10249
 mode: "ipvs"
 EOF
+
 mkdir -p ${kubeproxy_home}
 cat > /etc/systemd/system/kube-proxy.service<<EOF
 [Unit]

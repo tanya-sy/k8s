@@ -3,6 +3,7 @@
 echo "***********************清理docker环境**********************"
 yum -y install yum-utils
 yum remove docker \
+                  docker-ce \
                   docker-client \
                   docker-client-latest \
                   docker-common \

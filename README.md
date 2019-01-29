@@ -5,3 +5,4 @@
 部署来源于 小炒肉 。个人网站链接如下:https://jicki.me/
 
 
+kubeadm 安装k8s集群
