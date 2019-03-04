@@ -1,6 +1,6 @@
 #!/bin/bash
 
-##在我用kubeadm安装集群遇到的问题主要是：镜像问题
+##在我用kubeadm安装集群遇到的问题主要是：镜像问题 ;默认的基础镜像一直无法下载
 
 swapoff -a
 cat >>/etc/sysctl.d/k8s.conf <<EOF
@@ -63,7 +63,10 @@ EOF
 
 ###还是要保证三个软件的版本一致
 yum makecache
-yum install -y  kubeadm-1.11.3-0
+
+##有一次直接使用这条命令下载的时候，kubelet的版本是1.13,初始化报错版本不匹配，所以可以先下载指定版本的kubelet
+##再下载kubeadm
+#yum install -y  kubeadm-1.11.3-0
 rpm -q kubeadm kubelet kubectl
 
 ####
