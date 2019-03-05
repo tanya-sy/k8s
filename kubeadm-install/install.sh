@@ -1,6 +1,13 @@
 #!/bin/bash
 
-##在我用kubeadm安装集群遇到的问题主要是：镜像问题 ;默认的基础镜像一直无法下载
+##在我用kubeadm安装集群遇到的问题主要是：镜像问题 ;
+#虽然在初始化集群的配置文件上指定了镜像源但是 pause容器的镜像还是拉取官方设置的（无法上谷歌）
+##我的解决方案
+##下载阿里云的pause镜像 tag 为官方镜像 或者修改kubelet配置文件，指定pause镜像名。
+
+
+#pause根容器 官方镜像是：gcr.io/google_containers/pause-amd64:3.0
+#每次启动一个容器，会伴随一个pause容器的启动
 
 swapoff -a
 cat >>/etc/sysctl.d/k8s.conf <<EOF
