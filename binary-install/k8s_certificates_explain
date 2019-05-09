@@ -1,0 +1,11 @@
+##come from https://kubernetes.io/docs/setup/certificates/ see more in this 
+
+
+Client certificates for the kubelet to authenticate to the API server
+Server certificate for the API server endpoint
+Client certificates for administrators of the cluster to authenticate to the API server
+Client certificates for the API server to talk to the kubelets
+Client certificate for the API server to talk to etcd
+Client certificate/kubeconfig for the controller manager to talk to the API server
+Client certificate/kubeconfig for the scheduler to talk to the API server.
+Client and server certificates for the front-proxy
