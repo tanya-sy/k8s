@@ -3,7 +3,7 @@
  
 没有部署ingress组件
 
-部署来源于 小炒肉 。个人网站链接如下:https://jicki.me/
+部署来源于 小炒肉 。
 
 
 ##kubeadm 安装k8s集群
